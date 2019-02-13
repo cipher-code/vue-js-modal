@@ -1,6 +1,4 @@
 const path = require('path')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
@@ -13,13 +11,7 @@ module.exports = {
     publicPath: '/dist/',
   },
   optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true
-      }),
-      new OptimizeCSSAssetsPlugin({})
-    ]
+    minimize : false
   },
   module: {
     rules: [
