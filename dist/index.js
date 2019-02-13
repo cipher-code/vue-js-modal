@@ -1062,15 +1062,11 @@ function Modalvue_type_script_lang_js_defineProperty(obj, key, value) { if (key 
     },
     width: {
       type: [Number, String],
-      default: 600,
-      validator: validateNumber
+      default: 600
     },
     height: {
       type: [Number, String],
-      default: 300,
-      validator: function validator(value) {
-        return value === 'auto' || validateNumber(value);
-      }
+      default: 300
     },
     pivotX: {
       type: Number,
